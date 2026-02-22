@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Interactive Art Movements</title>
+    <link rel="stylesheet" href="art.css">
+</head>
+<body>
+
+<!-- Loading Screen -->
+<div id="loader">
+    <div class="spinner"></div>
+    <p>Loading Art Timeline...</p>
+</div>
+
+<header>
+    <h1>🎨 Evolution of Art Movements</h1>
+    <p>Interactive & Animated Website</p>
+</header>
+
+<div class="container">
+
+    <div class="timeline">
+        <button onclick="showContent('renaissance')">Renaissance</button>
+        <button onclick="showContent('baroque')">Baroque</button>
+        <button onclick="showContent('impressionism')">Impressionism</button>
+        <button onclick="showContent('cubism')">Cubism</button>
+        <button onclick="showContent('surrealism')">Surrealism</button>
+        <button onclick="showContent('abstract')">Abstract Expressionism</button>
+    </div>
+
+    <div class="content" id="display">
+        <h2>Welcome!</h2>
+        <p>Select an art movement to explore its historical context, artists, characteristics, and evolution.</p>
+    </div>
+
+</div>
+
+<script src="art.js"></script>
+</body>
+</html>
