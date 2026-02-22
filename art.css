@@ -1,97 +1,27 @@
 body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fad0c4);
-    background-size: 300% 300%;
-    animation: gradientBG 10s ease infinite;
+    background: linear-gradient(120deg, #89f7fe, #66a6ff);
+    color: #333;
 }
 
-@keyframes gradientBG {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
-header {
-    text-align: center;
-    padding: 30px;
-    color: white;
-}
-
-.container {
-    display: flex;
-    padding: 20px;
-    gap: 20px;
-}
-
-.timeline {
-    flex: 1;
-}
-
-.timeline button {
-    width: 100%;
-    padding: 15px;
-    margin: 10px 0;
-    border: none;
-    border-radius: 12px;
-    background: white;
-    cursor: pointer;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.timeline button:hover {
-    background: #333;
-    color: white;
-    transform: scale(1.05);
-}
-
-.content {
-    flex: 2;
-    background: white;
-    padding: 25px;
-    border-radius: 15px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-    opacity: 0;
-    transform: translateY(15px);
-    transition: all 0.5s ease;
-}
-
-.content.show {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.content img {
-    width: 100%;
-    max-height: 300px;
-    object-fit: cover;
-    border-radius: 12px;
-    margin-bottom: 15px;
-    transition: transform 0.4s ease;
-}
-
-.content img:hover {
-    transform: scale(1.08);
-}
-
-/* Loading Screen */
+/* Loader */
 #loader {
     position: fixed;
     width: 100%;
     height: 100%;
-    background: #222;
+    background: #111;
     color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    z-index: 999;
+    z-index: 1000;
 }
 
 .spinner {
     border: 6px solid #f3f3f3;
-    border-top: 6px solid #ff9a9e;
+    border-top: 6px solid #66a6ff;
     border-radius: 50%;
     width: 50px;
     height: 50px;
@@ -100,12 +30,85 @@ header {
 }
 
 @keyframes spin {
-    0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
 
+header {
+    text-align: center;
+    padding: 30px;
+    color: white;
+}
+
+.main-container {
+    display: flex;
+    min-height: 80vh;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 30%;
+    background: white;
+    padding: 20px;
+    box-shadow: 4px 0 15px rgba(0,0,0,0.1);
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.timeline-item {
+    padding: 15px;
+    margin-bottom: 12px;
+    background: #f4f4f4;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.timeline-item span {
+    display: block;
+    font-size: 0.8em;
+    color: gray;
+}
+
+.timeline-item:hover {
+    background: #66a6ff;
+    color: white;
+    transform: translateX(8px);
+}
+
+/* Content Area */
+.content {
+    width: 70%;
+    padding: 40px;
+    background: #ffffff;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.content img {
+    width: 100%;
+    max-height: 350px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    transition: transform 0.4s ease;
+}
+
+.content img:hover {
+    transform: scale(1.07);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
 @media (max-width: 768px) {
-    .container {
+    .main-container {
         flex-direction: column;
+    }
+    .sidebar, .content {
+        width: 100%;
     }
 }
