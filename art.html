@@ -2,36 +2,60 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Interactive Art Movements</title>
+    <title>Art Evolution Timeline</title>
     <link rel="stylesheet" href="art.css">
 </head>
 <body>
 
-<!-- Loading Screen -->
 <div id="loader">
     <div class="spinner"></div>
-    <p>Loading Art Timeline...</p>
+    <p>Loading Art Evolution...</p>
 </div>
 
 <header>
-    <h1>🎨 Evolution of Art Movements</h1>
-    <p>Interactive & Animated Website</p>
+    <h1>Evolution of Art Movements</h1>
+    <p>Evvery period has its unique characteristics and historical significance.</p>
 </header>
 
-<div class="container">
+<div class="main-container">
 
-    <div class="timeline">
-        <button onclick="showContent('renaissance')">Renaissance</button>
-        <button onclick="showContent('baroque')">Baroque</button>
-        <button onclick="showContent('impressionism')">Impressionism</button>
-        <button onclick="showContent('cubism')">Cubism</button>
-        <button onclick="showContent('surrealism')">Surrealism</button>
-        <button onclick="showContent('abstract')">Abstract Expressionism</button>
+    <div class="sidebar">
+        <h2>Art Evolution</h2>
+
+        <div class="timeline-item" onclick="showContent('renaissance')">
+            Renaissance
+            <span>1400–1600</span>
+        </div>
+
+        <div class="timeline-item" onclick="showContent('baroque')">
+            Baroque
+            <span>1600–1750</span>
+        </div>
+
+        <div class="timeline-item" onclick="showContent('impressionism')">
+            Impressionism
+            <span>1860–1890</span>
+        </div>
+
+        <div class="timeline-item" onclick="showContent('cubism')">
+            Cubism
+            <span>1907–1914</span>
+        </div>
+
+        <div class="timeline-item" onclick="showContent('surrealism')">
+            Surrealism
+            <span>1920s–1940s</span>
+        </div>
+
+        <div class="timeline-item" onclick="showContent('abstract')">
+            Abstract Expressionism
+            <span>1940s–1960s</span>
+        </div>
     </div>
 
     <div class="content" id="display">
-        <h2>Welcome!</h2>
-        <p>Select an art movement to explore its historical context, artists, characteristics, and evolution.</p>
+        <h2>Welcome</h2>
+        <p>Curious about how every period of art evolved? Click on a movement in the sidebar to explore its unique characteristics and historical significance.</p>
     </div>
 
 </div>
